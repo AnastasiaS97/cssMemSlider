@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+}
+
+body {
+    background:steelblue;
+    font-family: "Roboto";
+    
+}
+
+.memecarousel {
+    position: relative;
+    box-shadow: 0px 1px 5px (0, 0, 0, 0.50);
+    margin-top: 5vh;
+}
+
+.memecarousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.meme {
+    position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.meme img {
+    display: block;
+    height:auto;
+    max-width: 100%;
+}
+
+
+.dot {
+    display: block;
+    font-size: 3em;
+    color: black;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.dot:hover {
+    color:white;
+}
+
+
+ol {
+    list-style-type:none;
+    display: flex;
+}
+
+#meme2:checked ~ .navi-dots li:nth-child(2) .dot {
+    color:blue;
+}

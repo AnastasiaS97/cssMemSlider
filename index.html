@@ -5,28 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carousel</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class = "MemeCarousel">
-        <input type = "radio" id = "meme1" name = "memes"/>
-        <label for = "meme1" class = "memelabel"></label>
-        <input type = "radio" id = "meme2" name = "memes"/>
-        <label for = "meme2" class = "memelabel">Мем из реального времени</label>
-        <input type = "radio" id = "meme3" name = "memes"/>
-        <label for = "meme3" class = "memelabel">Хаха дедлайн Basic JS DS завтра</label>
-        <input type = "radio" id = "meme4" name = "memes"/>
-        <label for = "meme4" class = "memelabel">Тру геймер</label>
-        <input type = "radio" id = "meme5" name = "memes"/>
-        <label for = "meme5" class = "memelabel">В честь spooky month мем был захвачен скелетными войсками</label>
+    <div class = "memecarousel">
+        <div class = "memecarousel-wrapper">
+            <div class = "slider">
+                <input type = "radio" id = "meme1" name = "memes" checked hidden="">
+                <input type = "radio" id = "meme2" name = "memes" hidden="">
+                <input type = "radio" id = "meme3" name = "memes" hidden="">
+                <input type = "radio" id = "meme4" name = "memes" hidden="">
+                <input type = "radio" id = "meme5" name = "memes" hidden="">
+            </div>
 
-        <ul class = "memes">
-            <li class = "meme1"><img src = "/img/meme1.png"></li>
-            <li class = "meme2"><img src = "/img/meme2.png"></li>
-            <li class = "meme3"><img src = "/img/meme3.png"></li>
-            <li class = "meme4"><img src = "/img/meme4.png"></li>
-            <li class = "meme5"><img src = "/img/meme5.gif"></li>
-        </ul>
+            <div class = "meme"><img src = "/img/meme1.png" alt = "Merge"></div>
+            <div class = "caption">Люди, идущие на 450 баллов за музей</div>
+            <div class = "meme"><img src = "/img/meme2.png" alt = "CSS"></div>
+            <div class = "caption">Мем из реального времени</div>
+            <div class = "meme"><img src = "/img/meme3.png" alt = "Array"></div>
+            <div class = "caption">Когда дедлайн Basic JS DS</div>
+            <div class = "meme"><img src = "/img/meme4.png" alt = "VSCode"></div>
+            <div class = "caption">Становимся тру геймерами с помощью курсов</div>
+            <div class = "meme"><img src = "/img/meme5.gif" alt = "Skeleton"></div>
+            <div class = "caption">В честь spooky month данный мем был захвачен скелетом</div>
+            
+
+            <ol class = "navi-dots">
+                <li><label for = "meme1" class = "dot" id = "dot1">•</label></li>
+                <li><label for = "meme2" class = "dot" id = "dot2">•</label></li>
+                <li><label for = "meme3" class = "dot" id = "dot3">•</label></li>
+                <li><label for = "meme4" class = "dot" id = "dot4">•</label></li>
+                <li><label for = "meme5" class = "dot" id = "dot5">•</label></li>
+            </div>
+        </div>
     </div>
 
 </body>
