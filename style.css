@@ -106,6 +106,8 @@ ol {
     display: inline-block;
 }
 
+/* медиа-запросы для мобильных девайсов */
+
 @media (max-width: 450px) {
     .under-box {
         display: flex;
@@ -122,6 +124,8 @@ ol {
         font-size: 12px;
     }
 }
+
+/* слайдер */
 
 #meme1:checked ~ .content-wrapper .meme-box,
 #meme1:checked ~ .content-wrapper .caption-box {
@@ -148,7 +152,10 @@ transform: translateX(-300%);
 transform: translateX(-400%);
 }
 
-#meme1:checked ~ .content-wrapper #dot1 span,
+/* С этими стилями не вышло сделать слайдер подписей*/
+
+/* стили маркеров слайдера */
+#meme1:checked ~ .content-wrapper #dot1 span,  
 #meme2:checked ~ .content-wrapper #dot2 span,
 #meme3:checked ~ .content-wrapper #dot3 span,
 #meme4:checked ~ .content-wrapper #dot4 span,
