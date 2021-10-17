@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    max-height: 100vh;
+}
+
+body {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(49, 49, 49);
+    font-family: "Calibri"; 
+    line-height: 1.4;  
+    overflow-x: hidden;
+}
+
+div {
+    display: block;
+}
+
+.wrapper {
+    top: 5%;
+    bottom: 5%;
+}
+
+.content-wrapper {
+    width: 60vw;
+    padding: 8%;
+    background: rgb(14, 186, 192);
+    border-radius: 0.5rem;
+}
+
+.meme-box-wrapper {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.meme-box {
+    display: flex;
+    transition: all 0.4s ease-in-out;
+}
+
+.meme {
+    display: inline-block;
+    min-width: 100%;
+    height: 100%;
+}
+
+.meme img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+}
+
+.caption-box {
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    overflow-x: hidden;
+}
+
+.caption {
+    color: rgb(49, 49, 49);
+    min-width: 100%;
+    font-size: 1.3rem;
+}
+
+.under-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.under-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ol {
+    list-style-type:none;
+    display: flex;
+}
+
+.dot {
+    display: block;
+    color: rgb(49, 49, 49);
+    cursor: pointer;
+    padding: 2px;
+    font-size: 2rem;
+}
+
+.dot:hover {
+    color:white;
+}
+
+.dot-span {
+    display: inline-block;
+}
+
+/* медиа-запросы для мобильных девайсов */
+
+@media (max-width: 450px) {
+    .under-box {
+        display: flex;
+        flex-direction:row-reverse;
+        flex-wrap:wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+    }
+    .caption {
+        text-align: center;
+    }
+    .dot {
+        font-size: 12px;
+    }
+}
+
+/* слайдер */
+
+#meme1:checked ~ .content-wrapper .meme-box,
+#meme1:checked ~ .content-wrapper .caption-box {
+transform: translateX(0%);
+}
+
+#meme2:checked ~ .content-wrapper .meme-box,
+#meme2:checked ~ .content-wrapper .caption-box {
+transform: translateX(-100%);
+}
+
+#meme3:checked ~ .content-wrapper .meme-box,
+#meme3:checked ~ .content-wrapper .caption-box {
+transform: translateX(-200%);
+}
+
+#meme4:checked ~ .content-wrapper .meme-box,
+#meme4:checked ~ .content-wrapper .caption-box {
+transform: translateX(-300%);
+}
+
+#meme5:checked ~ .content-wrapper .meme-box,
+#meme5:checked ~ .content-wrapper .caption-box {
+transform: translateX(-400%);
+}
+
+/* С этими стилями не вышло сделать слайдер подписей*/
+
+/* стили маркеров слайдера */
+#meme1:checked ~ .content-wrapper #dot1 span,  
+#meme2:checked ~ .content-wrapper #dot2 span,
+#meme3:checked ~ .content-wrapper #dot3 span,
+#meme4:checked ~ .content-wrapper #dot4 span,
+#meme5:checked ~ .content-wrapper #dot5 span {
+    transform: scale(0.6);
+    color: orange;
+}
