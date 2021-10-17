@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+html {
+    max-height: 100vh;
+}
+
 body {
-    min-height: 100vh;
+    margin-top: 5%;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,8 +25,8 @@ div {
 }
 
 .wrapper {
-    top: 3rem;
-    bottom: 3rem;
+    top: 5%;
+    bottom: 5%;
 }
 
 .content-wrapper {
@@ -64,13 +69,20 @@ div {
 
 .caption {
     color: rgb(49, 49, 49);
-    font-size: 1.6rem;
     min-width: 100%;
+    font-size: 1.3rem;
+}
+
+.under-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .under-box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 ol {
@@ -80,10 +92,10 @@ ol {
 
 .dot {
     display: block;
-    font-size: 3em;
     color: rgb(49, 49, 49);
     cursor: pointer;
     padding: 2px;
+    font-size: 2rem;
 }
 
 .dot:hover {
@@ -92,7 +104,23 @@ ol {
 
 .dot-span {
     display: inline-block;
-    transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 450px) {
+    .under-box {
+        display: flex;
+        flex-direction:row-reverse;
+        flex-wrap:wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+    }
+    .caption {
+        text-align: center;
+    }
+    .dot {
+        font-size: 12px;
+    }
 }
 
 #meme1:checked ~ .content-wrapper .meme-box,
@@ -125,6 +153,6 @@ transform: translateX(-400%);
 #meme3:checked ~ .content-wrapper #dot3 span,
 #meme4:checked ~ .content-wrapper #dot4 span,
 #meme5:checked ~ .content-wrapper #dot5 span {
-    transform: scale(0.8);
+    transform: scale(0.6);
     color: orange;
 }
